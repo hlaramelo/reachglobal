@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import PerformanceTable from "@/components/sections/PerformanceTable";
+import PerformanceChart from "@/components/sections/PerformanceChart";
 import Strategy from "@/components/sections/Strategy";
 import PortfolioConstruction from "@/components/sections/PortfolioConstruction";
 import InvestmentProcess from "@/components/sections/InvestmentProcess";
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <PerformanceTable />
+      <PerformanceChart />
       <Strategy />
       <PortfolioConstruction />
       <InvestmentProcess />
