@@ -9,6 +9,8 @@ export const FUND_INFO = {
   manager: "Henrique Lara",
   regulation: "ANBIMA — Código de Melhores Práticas",
   aum: "+R$ 2,8 bilhões",
+  fundPL: "R$ 35,4 milhões / USD 6,78 milhões",
+  navCalculation: "Diário",
 };
 
 export const HERO_STATS = [
@@ -67,26 +69,44 @@ export const STRATEGY_PILLARS = [
 
 export const PORTFOLIO_TIERS = [
   {
-    percentage: "70%",
-    title: "Principais Posições",
-    subtitle: "Alta convicção, longo prazo",
+    percentage: "~55%",
+    title: "Ações Core",
+    subtitle: "Posições estruturais de longo prazo",
     description:
-      "Teses que passaram por processo rigoroso; ficamos expostos enquanto o fundamento justifica.",
+      "Empresas globais líderes que passaram por processo rigoroso de análise. Permanecemos expostos enquanto o fundamento justifica a tese.",
+    icon: "core",
   },
   {
-    percentage: "20%",
-    title: "Posições Táticas",
-    subtitle: "Catalisador de curto/médio prazo identificado",
+    percentage: "~18%",
+    title: "OptionsFlow",
+    subtitle: "Posições táticas com uso de opções",
     description:
-      "Resultados, eventos regulatórios, rotação setorial.",
+      "Estratégias com opções para capturar catalisadores de curto/médio prazo — resultados, eventos regulatórios, rotação setorial — com risco controlado e assimetria favorável.",
+    icon: "options",
   },
   {
-    percentage: "10%",
-    title: "Posições Exploratórias",
-    subtitle: "Teses em construção, situações especiais",
+    percentage: "~27%",
+    title: "Caixa",
+    subtitle: "Liquidez escalonada (D0 a D+15)",
     description:
-      "Assimetria evidente e risco controlado.",
+      "Gestão ativa de caixa com monitoramento diário. Permite agilidade para aproveitar oportunidades e proteger o portfólio.",
+    icon: "cash",
   },
+];
+
+export const TOP_CONTRIBUTORS = [
+  { ticker: "TSM", name: "Taiwan Semiconductor", sector: "Semicondutores", region: "Ásia", domain: "tsmc.com" },
+  { ticker: "NVDA", name: "Nvidia", sector: "Semicondutores", region: "EUA", domain: "nvidia.com" },
+  { ticker: "ASML", name: "ASML", sector: "Semicondutores", region: "Europa", domain: "asml.com" },
+  { ticker: "AAPL", name: "Apple", sector: "Tecnologia", region: "EUA", domain: "apple.com" },
+  { ticker: "AMAT", name: "Applied Materials", sector: "Semicondutores", region: "EUA", domain: "appliedmaterials.com" },
+  { ticker: "AEM", name: "Agnico Eagle", sector: "Mineração", region: "Americas", domain: "agnicoeagle.com" },
+  { ticker: "SCCO", name: "Southern Copper", sector: "Mineração", region: "Americas", domain: "southerncoppercorp.com" },
+  { ticker: "BYMA", name: "BYMA", sector: "Financeiro", region: "Americas", domain: "byma.com.ar" },
+  { ticker: "SK", name: "SK Hynix", sector: "Semicondutores", region: "Ásia", domain: "skhynix.com" },
+  { ticker: "GEV", name: "GE Vernova", sector: "Energia", region: "EUA", domain: "gevernova.com" },
+  { ticker: "CAT", name: "Caterpillar", sector: "Industrial", region: "EUA", domain: "caterpillar.com" },
+  { ticker: "JPM", name: "JPMorgan", sector: "Financeiro", region: "EUA", domain: "jpmorganchase.com" },
 ];
 
 export const SCORING_CRITERIA = [
