@@ -69,28 +69,25 @@ export const STRATEGY_PILLARS = [
 
 export const PORTFOLIO_TIERS = [
   {
-    percentage: "~55%",
-    title: "Ações Core",
-    subtitle: "Posições estruturais de longo prazo",
+    percentage: "70%",
+    title: "Principais Posições",
+    subtitle: "Alta convicção, longo prazo",
     description:
-      "Empresas globais líderes que passaram por processo rigoroso de análise. Permanecemos expostos enquanto o fundamento justifica a tese.",
-    icon: "core",
+      "Teses que passaram por processo rigoroso; ficamos expostos enquanto o fundamento justifica.",
   },
   {
-    percentage: "~18%",
-    title: "OptionsFlow",
-    subtitle: "Posições táticas com uso de opções",
+    percentage: "20%",
+    title: "Posições Táticas",
+    subtitle: "Catalisador de curto/médio prazo identificado",
     description:
-      "Estratégias com opções para capturar catalisadores de curto/médio prazo — resultados, eventos regulatórios, rotação setorial — com risco controlado e assimetria favorável.",
-    icon: "options",
+      "Resultados, eventos regulatórios, rotação setorial.",
   },
   {
-    percentage: "~27%",
-    title: "Caixa",
-    subtitle: "Liquidez escalonada (D0 a D+15)",
+    percentage: "10%",
+    title: "Posições Exploratórias",
+    subtitle: "Teses em construção, situações especiais",
     description:
-      "Gestão ativa de caixa com monitoramento diário. Permite agilidade para aproveitar oportunidades e proteger o portfólio.",
-    icon: "cash",
+      "Assimetria evidente e risco controlado.",
   },
 ];
 
