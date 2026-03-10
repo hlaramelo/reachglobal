@@ -42,17 +42,28 @@ export default function PerformanceTable() {
 
         {/* Table */}
         <ScrollReveal delay={200}>
-          <div className="overflow-x-auto rounded-xl border border-white/10">
-            <table className="w-full text-sm">
+          {/* Mobile scroll hint */}
+          <p className="text-xs text-white/30 text-center mb-2 md:hidden">
+            Deslize para ver mais →
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-white/10 -mx-2 md:mx-0">
+            <table className="w-full text-sm" role="table">
+              <caption className="sr-only">
+                Retornos mensais do Reach Global vs ACWI em 2025–2026
+              </caption>
               <thead>
                 <tr className="border-b border-white/10 bg-navy-800/50">
-                  <th className="text-left py-4 px-4 font-semibold text-white/70 min-w-[140px]">
+                  <th
+                    scope="col"
+                    className="text-left py-3 md:py-4 px-3 md:px-4 font-semibold text-white/70 min-w-[100px] md:min-w-[140px] sticky left-0 bg-navy-800/90 backdrop-blur-sm z-10"
+                  >
                     Fundo
                   </th>
                   {MONTHLY_RETURNS.headers.map((h) => (
                     <th
                       key={h}
-                      className="text-center py-4 px-3 font-semibold text-white/70 min-w-[65px]"
+                      scope="col"
+                      className="text-center py-3 md:py-4 px-2 md:px-3 font-semibold text-white/70 min-w-[55px] md:min-w-[65px]"
                     >
                       {h}
                     </th>
@@ -62,13 +73,13 @@ export default function PerformanceTable() {
               <tbody>
                 {/* Fund row */}
                 <tr className="border-b border-white/5 hover:bg-white/[0.02]">
-                  <td className="py-4 px-4 font-semibold text-accent">
+                  <td className="py-3 md:py-4 px-3 md:px-4 font-semibold text-accent sticky left-0 bg-navy-900/90 backdrop-blur-sm z-10">
                     Reach Global
                   </td>
                   {MONTHLY_RETURNS.fund.map((val, i) => (
                     <td
                       key={i}
-                      className={`text-center py-4 px-3 font-medium ${
+                      className={`text-center py-3 md:py-4 px-2 md:px-3 font-medium text-xs md:text-sm ${
                         i >= MONTHLY_RETURNS.headers.length - 2
                           ? "font-bold text-accent"
                           : isPositive(val)
@@ -82,13 +93,13 @@ export default function PerformanceTable() {
                 </tr>
                 {/* Benchmark row */}
                 <tr className="hover:bg-white/[0.02]">
-                  <td className="py-4 px-4 font-semibold text-white/50">
+                  <td className="py-3 md:py-4 px-3 md:px-4 font-semibold text-white/50 sticky left-0 bg-navy-900/90 backdrop-blur-sm z-10">
                     ACWI
                   </td>
                   {MONTHLY_RETURNS.benchmark.map((val, i) => (
                     <td
                       key={i}
-                      className={`text-center py-4 px-3 ${
+                      className={`text-center py-3 md:py-4 px-2 md:px-3 text-xs md:text-sm ${
                         i >= MONTHLY_RETURNS.headers.length - 2
                           ? "font-bold text-white/70"
                           : isPositive(val)

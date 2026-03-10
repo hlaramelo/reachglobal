@@ -13,41 +13,41 @@ function AttributionBar({
   maxAbsValue: number;
 }) {
   const isPositive = value >= 0;
-  const barWidth = Math.abs(value) / maxAbsValue * 100;
+  const barWidth = (Math.abs(value) / maxAbsValue) * 100;
   const formatted = (value >= 0 ? "+" : "") + value.toFixed(2) + "%";
 
   return (
-    <div className="flex items-center gap-3 py-2">
-      <span className="text-sm text-white/70 w-36 text-right flex-shrink-0 truncate">
+    <div
+      className="flex items-center gap-2 md:gap-3 py-1.5 md:py-2"
+      role="listitem"
+      aria-label={`${name}: ${formatted}`}
+    >
+      <span className="text-xs md:text-sm text-white/70 w-24 md:w-36 text-right flex-shrink-0 truncate">
         {name}
       </span>
-      <div className="flex-1 flex items-center h-6">
-        {/* Center line is at 50% */}
+      <div className="flex-1 flex items-center h-5 md:h-6">
         <div className="relative w-full h-full flex items-center">
           {isPositive ? (
             <>
               <div className="w-1/2" />
               <div
-                className="h-5 rounded-r bg-accent/70"
+                className="h-4 md:h-5 rounded-r bg-accent/70"
                 style={{ width: `${barWidth / 2}%` }}
               />
             </>
           ) : (
-            <>
-              <div className="w-1/2 flex justify-end">
-                <div
-                  className="h-5 rounded-l bg-red-400/60"
-                  style={{ width: `${barWidth / 2}%` }}
-                />
-              </div>
-            </>
+            <div className="w-1/2 flex justify-end">
+              <div
+                className="h-4 md:h-5 rounded-l bg-red-400/60"
+                style={{ width: `${barWidth / 2}%` }}
+              />
+            </div>
           )}
-          {/* Center line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/20" />
         </div>
       </div>
       <span
-        className={`text-sm font-medium w-16 text-right flex-shrink-0 ${
+        className={`text-xs md:text-sm font-medium w-14 md:w-16 text-right flex-shrink-0 ${
           isPositive ? "text-accent" : "text-red-400"
         }`}
       >
@@ -71,8 +71,10 @@ function AttributionChart({
   return (
     <div>
       <h3 className="text-lg font-bold mb-2">{title}</h3>
-      <p className="text-sm text-white/40 mb-6">Desde o início (base 30/01/2026)</p>
-      <div className="space-y-0.5">
+      <p className="text-xs md:text-sm text-white/40 mb-4 md:mb-6">
+        Desde o início (base 30/01/2026)
+      </p>
+      <div className="space-y-0" role="list">
         {data.map((item) => (
           <AttributionBar
             key={item.name}
@@ -84,9 +86,7 @@ function AttributionChart({
       </div>
       <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
         <span className="text-sm font-semibold text-white/80">Total</span>
-        <span className="text-accent font-bold">
-          +{total.toFixed(2)}%
-        </span>
+        <span className="text-accent font-bold">+{total.toFixed(2)}%</span>
       </div>
     </div>
   );
@@ -97,19 +97,19 @@ export default function PerformanceAttribution() {
     <section id="attribution" className="section-padding bg-navy-900">
       <div className="container-custom">
         <ScrollReveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Atribuição de Performance
             </h2>
-            <p className="text-white/60 text-lg">
+            <p className="text-white/60 text-base md:text-lg">
               Contribuição por setor e região desde o início
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
           <ScrollReveal delay={100}>
-            <div className="bg-white/[0.02] border border-white/10 rounded-xl p-6 md:p-8">
+            <div className="bg-white/[0.02] border border-white/10 rounded-xl p-4 md:p-8">
               <AttributionChart
                 title="Por Setor"
                 data={ATTRIBUTION_BY_SECTOR}
@@ -119,7 +119,7 @@ export default function PerformanceAttribution() {
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <div className="bg-white/[0.02] border border-white/10 rounded-xl p-6 md:p-8">
+            <div className="bg-white/[0.02] border border-white/10 rounded-xl p-4 md:p-8">
               <AttributionChart
                 title="Por Região"
                 data={ATTRIBUTION_BY_REGION}

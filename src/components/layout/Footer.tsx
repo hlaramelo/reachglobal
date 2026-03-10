@@ -4,6 +4,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
+      role="contentinfo"
       className="relative"
       style={{
         background: "linear-gradient(135deg, #0D1F3C 0%, #1A3A5C 100%)",

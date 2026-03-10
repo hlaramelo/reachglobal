@@ -6,6 +6,7 @@ export default function Hero() {
       {/* Background gradient */}
       <div
         className="absolute inset-0"
+        aria-hidden="true"
         style={{
           background:
             "linear-gradient(160deg, #0D1F3C 0%, #1A3A5C 40%, #0D1F3C 100%)",
@@ -13,7 +14,7 @@ export default function Hero() {
       />
 
       {/* Mountain SVG overlay */}
-      <div className="absolute inset-0 opacity-[0.04]">
+      <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true">
         <svg
           viewBox="0 0 1440 900"
           fill="none"
@@ -33,13 +34,13 @@ export default function Hero() {
       </div>
 
       {/* Accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-accent" aria-hidden="true" />
 
-      <div className="container-custom relative z-10 pt-32 pb-20">
+      <div className="container-custom relative z-10 pt-24 md:pt-32 pb-16 md:pb-20">
         <div className="max-w-4xl">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-8">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" aria-hidden="true" />
             <span className="text-accent text-sm font-medium">
               Reach Global USD
             </span>
@@ -54,36 +55,59 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl mb-12 text-balance">
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl mb-10 md:mb-12 text-balance">
             Estratégia long only agnóstica a setor, país e tamanho — construída
             para capturar as melhores oportunidades do mundo com proteção
             cambial natural.
           </p>
 
-          {/* CTA */}
-          <a
-            href="#performance"
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-sm uppercase tracking-wider"
-          >
-            Ver Performance
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* CTAs */}
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="#performance"
+              className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-sm uppercase tracking-wider"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </a>
+              Ver Performance
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                />
+              </svg>
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 border border-white/20 hover:border-accent/40 text-white/80 hover:text-white font-semibold px-8 py-3.5 rounded-lg transition-all text-sm uppercase tracking-wider"
+            >
+              Fale Conosco
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
 
         {/* Hero Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 pt-10 border-t border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 md:mt-20 pt-10 border-t border-white/10">
           {HERO_STATS.map((stat, i) => (
             <div key={i} className="text-center md:text-left">
               <p className="text-3xl md:text-4xl font-bold text-accent mb-1">
@@ -97,7 +121,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy-900 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy-900 to-transparent" aria-hidden="true" />
     </section>
   );
 }

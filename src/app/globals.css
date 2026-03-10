@@ -12,6 +12,12 @@
   body {
     @apply bg-navy-900 text-white font-sans antialiased;
   }
+
+  /* Focus styles */
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent rounded;
+  }
 }
 
 @layer components {
@@ -21,6 +27,14 @@
 
   .container-custom {
     @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-12;
+  }
+
+  .skip-to-content {
+    @apply absolute -top-full left-4 z-[100] bg-accent text-white font-semibold px-6 py-3 rounded-b-lg transition-all;
+  }
+
+  .skip-to-content:focus {
+    @apply top-0;
   }
 }
 
@@ -41,6 +55,27 @@
   }
 }
 
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -57,4 +92,65 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #29AF3C;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1A3A5C #0D1F3C;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  header,
+  .back-to-top {
+    display: none !important;
+  }
+
+  footer {
+    background: none !important;
+    color: black !important;
+    border-top: 1px solid #ccc;
+  }
+
+  section {
+    background: white !important;
+    color: black !important;
+    page-break-inside: avoid;
+    padding: 1rem 0 !important;
+  }
+
+  .text-accent,
+  .text-accent\/80 {
+    color: #1a7a28 !important;
+  }
+
+  .text-white\/60,
+  .text-white\/70,
+  .text-white\/80,
+  .text-white\/50,
+  .text-white\/40 {
+    color: #444 !important;
+  }
+
+  .border-white\/10,
+  .border-white\/5 {
+    border-color: #ddd !important;
+  }
+
+  .bg-white\/\[0\.02\],
+  .bg-white\/\[0\.03\],
+  .bg-navy-800\/50 {
+    background: #f9f9f9 !important;
+  }
+
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
