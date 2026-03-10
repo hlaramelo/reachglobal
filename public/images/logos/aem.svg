@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="20" fill="#1a1a2e"/>
+  <polygon points="60,28 85,72 35,72" fill="none" stroke="#c5a028" stroke-width="3"/>
+  <polygon points="60,40 75,65 45,65" fill="#c5a028" opacity="0.3"/>
+  <text x="60" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#c5a028">AGNICO</text>
+</svg>

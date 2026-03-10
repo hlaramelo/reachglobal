@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="20" fill="#1a1a2e"/>
+  <text x="60" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#00b4d8">BYMA</text>
+  <rect x="25" y="74" width="70" height="2" rx="1" fill="#0077b6"/>
+  <text x="60" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#90e0ef" letter-spacing="2">BOLSAS Y MERCADOS</text>
+</svg>

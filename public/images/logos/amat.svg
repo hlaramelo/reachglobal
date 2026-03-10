@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="20" fill="#1a1a2e"/>
+  <text x="60" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#ffffff">Applied</text>
+  <text x="60" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#f47920">Materials</text>
+</svg>
