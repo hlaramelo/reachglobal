@@ -3,7 +3,6 @@
 import { TOP_CONTRIBUTORS } from "@/lib/constants";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Image from "next/image";
-import { useState } from "react";
 
 const SECTOR_COLORS: Record<string, string> = {
   Semicondutores: "bg-blue-400/15 text-blue-300",
@@ -13,38 +12,6 @@ const SECTOR_COLORS: Record<string, string> = {
   Energia: "bg-orange-400/15 text-orange-300",
   Industrial: "bg-cyan-400/15 text-cyan-300",
 };
-
-function CompanyLogo({
-  ticker,
-  name,
-  domain,
-}: {
-  ticker: string;
-  name: string;
-  domain: string;
-}) {
-  const [failed, setFailed] = useState(false);
-
-  if (failed) {
-    return (
-      <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-xs font-bold text-white/70">
-        {ticker.slice(0, 3)}
-      </div>
-    );
-  }
-
-  return (
-    <Image
-      src={`https://logo.clearbit.com/${domain}`}
-      alt={`${name} logo`}
-      width={40}
-      height={40}
-      className="rounded-lg bg-white/10"
-      onError={() => setFailed(true)}
-      unoptimized
-    />
-  );
-}
 
 export default function TopContributors() {
   return (
@@ -66,10 +33,12 @@ export default function TopContributors() {
             <ScrollReveal key={company.ticker} delay={i * 60}>
               <div className="bg-white/[0.03] border border-white/10 rounded-xl p-4 md:p-5 hover:border-accent/30 transition-all duration-300 hover:scale-[1.02] h-full">
                 <div className="flex items-start gap-3 mb-3">
-                  <CompanyLogo
-                    ticker={company.ticker}
-                    name={company.name}
-                    domain={company.domain}
+                  <Image
+                    src={company.logo}
+                    alt={`${company.name} logo`}
+                    width={40}
+                    height={40}
+                    className="rounded-lg"
                   />
                   <div className="min-w-0">
                     <p className="font-bold text-sm text-white truncate">

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="20" fill="#1a1a2e"/>
+  <text x="60" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="30" fill="#0f7dc2">ASML</text>
+  <rect x="20" y="78" width="80" height="3" rx="1.5" fill="#00a1e0"/>
+</svg>

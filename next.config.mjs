@@ -4,12 +4,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "logo.clearbit.com",
-      },
-    ],
+    remotePatterns: [],
   },
 };
 

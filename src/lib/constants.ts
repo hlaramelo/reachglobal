@@ -92,18 +92,18 @@ export const PORTFOLIO_TIERS = [
 ];
 
 export const TOP_CONTRIBUTORS = [
-  { ticker: "TSM", name: "Taiwan Semiconductor", sector: "Semicondutores", region: "Ásia", domain: "tsmc.com" },
-  { ticker: "NVDA", name: "Nvidia", sector: "Semicondutores", region: "EUA", domain: "nvidia.com" },
-  { ticker: "ASML", name: "ASML", sector: "Semicondutores", region: "Europa", domain: "asml.com" },
-  { ticker: "AAPL", name: "Apple", sector: "Tecnologia", region: "EUA", domain: "apple.com" },
-  { ticker: "AMAT", name: "Applied Materials", sector: "Semicondutores", region: "EUA", domain: "appliedmaterials.com" },
-  { ticker: "AEM", name: "Agnico Eagle", sector: "Mineração", region: "Americas", domain: "agnicoeagle.com" },
-  { ticker: "SCCO", name: "Southern Copper", sector: "Mineração", region: "Americas", domain: "southerncoppercorp.com" },
-  { ticker: "BYMA", name: "BYMA", sector: "Financeiro", region: "Americas", domain: "byma.com.ar" },
-  { ticker: "SK", name: "SK Hynix", sector: "Semicondutores", region: "Ásia", domain: "skhynix.com" },
-  { ticker: "GEV", name: "GE Vernova", sector: "Energia", region: "EUA", domain: "gevernova.com" },
-  { ticker: "CAT", name: "Caterpillar", sector: "Industrial", region: "EUA", domain: "caterpillar.com" },
-  { ticker: "JPM", name: "JPMorgan", sector: "Financeiro", region: "EUA", domain: "jpmorganchase.com" },
+  { ticker: "TSM", name: "Taiwan Semiconductor", sector: "Semicondutores", region: "Ásia", logo: "/images/logos/tsm.svg" },
+  { ticker: "NVDA", name: "Nvidia", sector: "Semicondutores", region: "EUA", logo: "/images/logos/nvda.svg" },
+  { ticker: "ASML", name: "ASML", sector: "Semicondutores", region: "Europa", logo: "/images/logos/asml.svg" },
+  { ticker: "AAPL", name: "Apple", sector: "Tecnologia", region: "EUA", logo: "/images/logos/aapl.svg" },
+  { ticker: "AMAT", name: "Applied Materials", sector: "Semicondutores", region: "EUA", logo: "/images/logos/amat.svg" },
+  { ticker: "AEM", name: "Agnico Eagle", sector: "Mineração", region: "Americas", logo: "/images/logos/aem.svg" },
+  { ticker: "SCCO", name: "Southern Copper", sector: "Mineração", region: "Americas", logo: "/images/logos/scco.svg" },
+  { ticker: "BYMA", name: "BYMA", sector: "Financeiro", region: "Americas", logo: "/images/logos/byma.svg" },
+  { ticker: "SK", name: "SK Hynix", sector: "Semicondutores", region: "Ásia", logo: "/images/logos/sk.svg" },
+  { ticker: "GEV", name: "GE Vernova", sector: "Energia", region: "EUA", logo: "/images/logos/gev.svg" },
+  { ticker: "CAT", name: "Caterpillar", sector: "Industrial", region: "EUA", logo: "/images/logos/cat.svg" },
+  { ticker: "JPM", name: "JPMorgan", sector: "Financeiro", region: "EUA", logo: "/images/logos/jpm.svg" },
 ];
 
 export const SCORING_CRITERIA = [

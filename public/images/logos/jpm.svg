@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="20" fill="#1a1a2e"/>
+  <polygon points="60,22 82,35 82,61 60,74 38,61 38,35" fill="none" stroke="#1a73e8" stroke-width="3"/>
+  <polygon points="60,30 76,40 76,60 60,70 44,60 44,40" fill="#1a73e8" opacity="0.2"/>
+  <text x="60" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#ffffff">JPM</text>
+  <text x="60" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#5a9be6">JPMORGAN CHASE</text>
+</svg>
