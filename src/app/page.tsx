@@ -6,6 +6,7 @@ import PortfolioConstruction from "@/components/sections/PortfolioConstruction";
 import InvestmentProcess from "@/components/sections/InvestmentProcess";
 import PerformanceAttribution from "@/components/sections/PerformanceAttribution";
 import FundFacts from "@/components/sections/FundFacts";
+import CTASection from "@/components/sections/CTASection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <InvestmentProcess />
       <PerformanceAttribution />
       <FundFacts />
+      <CTASection />
     </>
   );
 }

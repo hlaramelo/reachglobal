@@ -1,4 +1,5 @@
 import { HERO_STATS } from "@/lib/constants";
+import CountUp from "@/components/ui/CountUp";
 
 export default function Hero() {
   return (
@@ -111,7 +112,7 @@ export default function Hero() {
           {HERO_STATS.map((stat, i) => (
             <div key={i} className="text-center md:text-left">
               <p className="text-3xl md:text-4xl font-bold text-accent mb-1">
-                {stat.value}
+                <CountUp value={stat.value} />
               </p>
               <p className="text-sm font-medium text-white/90">{stat.label}</p>
               <p className="text-xs text-white/50 mt-0.5">{stat.sublabel}</p>
