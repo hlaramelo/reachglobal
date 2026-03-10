@@ -30,7 +30,7 @@ const MONTHLY_DATA = [
 ];
 
 const MAISRETORNO_URL =
-  "https://maisretorno.com/fundo/reach-1618-global-fic-fia";
+  "https://maisretorno.com/gestores/reach-capital-investimentos/fundos";
 
 interface TooltipProps {
   active?: boolean;
@@ -252,7 +252,7 @@ export default function PerformanceChart() {
                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                   />
                 </svg>
-                Ver no Mais Retorno
+                Fundos Reach no Mais Retorno
               </a>
             </div>
           </div>
